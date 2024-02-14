@@ -7,8 +7,9 @@ screen.bgcolor("black")
 screen.title("Taha SnakeGame")
 
 snake = Turtle("square")
+snake.penup()
 snake.color("white")
-snake.shapesize(1,3,1)
+snake.shapesize(1, 3, 1)
 
 
 
