@@ -9,6 +9,7 @@ class Snake:
     def __init__(self):
         self.segments = []
         self.create_snake()
+        self.head = self.segments[0]
 
     def create_snake(self):
         for position in STARTING_POSITIONS:
@@ -25,13 +26,13 @@ class Snake:
             self.segments[seg_num].goto(new_x, new_y)
 
         self.segments[0].forward(MOVE_DISTANCE)
-        self.segments[0].left(ANGLE_ROTATION)
+        # self.segments[0].left(ANGLE_ROTATION)
 
     def up(self):
-        pass
+        self.head.setheading(90)
     def down(self):
-        pass
+        self.head.setheading(270)
     def right(self):
-        pass
+        self.head.setheading(0)
     def left(self):
-        pass
+        self.head.setheading(180)
