@@ -15,6 +15,7 @@ game_is_on = True
 while game_is_on:
     screen.update()
     time.sleep(0.5)
+
     # Automatic Movement of the Snake
     snake.move()
 
