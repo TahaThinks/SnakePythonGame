@@ -4,6 +4,7 @@ STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
 ANGLE_ROTATION = 90
 
+
 class Snake:
     def __init__(self):
         self.segments = []
@@ -25,3 +26,12 @@ class Snake:
 
         self.segments[0].forward(MOVE_DISTANCE)
         self.segments[0].left(ANGLE_ROTATION)
+
+    def up(self):
+        pass
+    def down(self):
+        pass
+    def right(self):
+        pass
+    def left(self):
+        pass
