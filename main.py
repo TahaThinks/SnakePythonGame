@@ -21,7 +21,6 @@ screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
 screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
-count = 0
 
 game_is_on = True
 while game_is_on:
@@ -35,9 +34,7 @@ while game_is_on:
     if snake.head.distance(food) < 15:
         # print("Eaten")
         food.refresh()
-        count += 1
-        scoreboard.score += 1
-        scoreboard.refresh_score()
+        scoreboard.increase_score()
 
 screen.exitonclick()
 

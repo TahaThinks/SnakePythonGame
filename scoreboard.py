@@ -4,12 +4,17 @@ from turtle import Turtle
 class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
+        self.score = 0
         self.hideturtle()
+        self.penup()
         self.color("white")
         self.goto(0, 270)
-        self.score = 0
-        self.refresh_score()
+        self.update_scoreboard()
 
-    def refresh_score(self):
+    def update_scoreboard(self):
+        self.write(arg=f"Score: {self.score}", move=False, align="center", font=("Arial", 14, "normal"))
+
+    def increase_score(self):
+        self.score += 1
         self.clear()
-        self.write(arg=f"Score: {self.score}", move=False, align="center", font=("white", 14, "normal"))
+        self.update_scoreboard()
