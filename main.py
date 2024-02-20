@@ -35,6 +35,12 @@ while game_is_on:
         food.refresh()
         scoreboard.increase_score()
 
+    # Detect Collision with wall.
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        print("Hit the Wall")
+
+
+
 screen.exitonclick()
 
 
