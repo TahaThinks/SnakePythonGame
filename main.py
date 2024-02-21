@@ -42,6 +42,8 @@ while game_is_on:
         scoreboard.game_over()
 
     # Detect Collision with Tail
+    # if head collides with any segment in the tail:
+        # trigger game over
 
 
 
