@@ -2,12 +2,14 @@ from turtle import Turtle
 ALIGNMENT = "center"
 FONT = ("Courier", 14, "normal")
 
+with open("data.txt", mode="r") as file:
+    score = int(file.read())
 
 class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
-        self.highscore = 0
+        self.highscore = score
         self.hideturtle()
         self.penup()
         self.color("white")
