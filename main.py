@@ -15,7 +15,6 @@ snake = Snake()
 food = Food()
 scoreboard = Scoreboard()
 
-
 screen.listen()
 screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
@@ -50,6 +49,5 @@ while game_is_on:
             # scoreboard.game_over()
             scoreboard.reset_scoreboard()
             snake.reset()
-
 
 screen.exitonclick()
