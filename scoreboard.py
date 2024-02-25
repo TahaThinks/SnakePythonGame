@@ -28,10 +28,8 @@ class Scoreboard(Turtle):
         if self.score > self.highscore:
             self.highscore = self.score
 
+        with open("data.txt", mode='w') as file:
+            file.write(str(self.highscore))
+
         self.score = 0
         self.update_scoreboard()
-
-
-    # def game_over(self):
-    #     self.goto(0,0)
-    #     self.write("GAME OVER", align=ALIGNMENT, font=FONT)
