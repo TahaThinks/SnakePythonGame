@@ -30,5 +30,6 @@ class Scoreboard(Turtle):
             with open("data.txt", mode='w') as file:
                 file.write(str(self.highscore))
 
+
         self.score = 0
         self.update_scoreboard()
